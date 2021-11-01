@@ -60,7 +60,7 @@ const data = {
             name:'Lacoste Belt',
             category:'Belt',
             image:'/images/product-1.png',
-            price: 45,
+            price: 50,
             brand: 'Lacoste',
             rating: 5.0,
             numReviews: 10,
