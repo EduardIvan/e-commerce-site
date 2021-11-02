@@ -29,7 +29,7 @@ const data = {
             image:'/images/product-1.png',
             price: 89,
             brand: 'Adidas',
-            rating: 3.5,
+            rating: 4.5,
             numReviews: 10,
             description: 'high quality product',
         },
