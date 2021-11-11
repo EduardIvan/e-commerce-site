@@ -17,7 +17,6 @@ const data = {
     ],
     products:[
         {
-            _id:'1',
             name:'Converse Shoes',
             category:'Shoes',
             image:'/images/product-1.png',
@@ -29,7 +28,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id:'2',
             name:'Nike Shirt',
             category:'Shirt',
             image:'/images/product-1.png',
@@ -41,7 +39,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id:'3',
             name:'Adidas sport shorts',
             category:'Shorts',
             image:'/images/product-1.png',
@@ -53,7 +50,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id:'4',
             name:'Converse Hat',
             category:'Hat',
             image:'/images/product-1.png',
@@ -65,7 +61,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id:'5',
             name:'Converse Socks',
             category:'Socks',
             image:'/images/product-1.png',
@@ -77,7 +72,6 @@ const data = {
             description: 'high quality product',
         },
         {
-            _id:'6',
             name:'Lacoste Belt',
             category:'Belt',
             image:'/images/product-1.png',
