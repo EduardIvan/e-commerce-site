@@ -62,7 +62,7 @@ export default function CartScreen(props) {
                                                 ))}
                                             </select>
                                         </div>
-                                        <div>
+                                        <div className="min-5">
                                             ${item.price}
                                         </div>
                                         <div>

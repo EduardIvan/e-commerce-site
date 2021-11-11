@@ -75,6 +75,10 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+select {
+  text-align: center;
+  width: 6rem;
+}
 button {
   background-color: #f8f8f8;
   cursor: pointer;
@@ -127,9 +131,13 @@ a.brand {
   flex: 2 1 50rem;
 }
 .min-30 {
-  max-width: 30rem;
+  width: 30rem;
+  text-align: center;
 }
-
+.min-5 {
+  text-align: center;
+  width: 5rem;
+}
 /* Footer */
 
 .row.center {
