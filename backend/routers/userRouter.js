@@ -28,8 +28,8 @@ userRouter.post('/signin', expressAsyncHandler(async (req, res) =>{
             });
             return;
         }
-    }
-    res.status(401).send({ message: 'Invalid email or password'});
+        res.status(401).send({ message: 'Invalid email or password'});
+    }   
 }));
 
 export default userRouter;
