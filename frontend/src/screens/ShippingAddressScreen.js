@@ -12,11 +12,11 @@ export default function ShippingAddressScreen(props) {
         props.history.push('/signin');
     }
 
-    const [fullName, setFullName] = useState(shippingAddress.setFullName);
-    const [address, setAddress] = useState(shippingAddress.setAddress);
-    const [city, setCity] = useState(shippingAddress.setCity);
-    const [postalCode, setPostalCode] = useState(shippingAddress.setPostalCode);
-    const [country, setCountry] = useState(shippingAddress.setCountry);
+    const [fullName, setFullName] = useState(shippingAddress.fullName);
+    const [address, setAddress] = useState(shippingAddress.address);
+    const [city, setCity] = useState(shippingAddress.city);
+    const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
+    const [country, setCountry] = useState(shippingAddress.country);
 
     const dispatch = useDispatch();
     const submitHandler = (e) => {

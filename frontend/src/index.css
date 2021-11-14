@@ -138,6 +138,10 @@ a.brand {
   text-align: center;
   width: 5rem;
 }
+.min-15 {
+  text-align: center;
+  width: 15rem;
+}
 /* Footer */
 
 .row.center {
