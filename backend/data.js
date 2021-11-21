@@ -82,17 +82,6 @@ const data = {
             numReviews: 10,
             description: 'high quality product',
         },
-        {
-            name:'Lacoste necklace',
-            category:'Belt',
-            image:'/images/product-1.png',
-            price: 5,
-            countInStock: 21,
-            brand: 'Lacoste',
-            rating: 5.0,
-            numReviews: 10,
-            description: 'high quality product',
-        },
     ],
 };
 export default data;

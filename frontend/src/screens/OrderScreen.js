@@ -15,7 +15,7 @@ export default function OrderScreen(props) {
     const orderDetails = useSelector((state) => state.orderDetails);
     const { order, loading, error } = orderDetails;
 
-    const orderPay = useSelector(state => state.orderDetails);
+    const orderPay = useSelector((state) => state.orderPay);
     const { loading: loadingPay, error: errorPay, success: successPay } = orderPay;
     const dispatch = useDispatch();
    
