@@ -20,6 +20,8 @@ const orderSchema = new mongoose.Schema({
         city: { type: String, required: true },
         postalCode: { type: String, required: true },
         country: { type: String, required: true },
+        lat: Number,
+        lng: Number,
     },
     paymentMethod: { type: String, required: true },
     paymentResult: {
@@ -38,6 +40,7 @@ const orderSchema = new mongoose.Schema({
     paidAt: { type: Date },
     isDelivered: { type: Boolean, default: false },
     deliveredAt: {type: Date},
+    createdAt: {type: Date},
 }, {
     timesstamps: true,
     

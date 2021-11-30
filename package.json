@@ -24,7 +24,8 @@
     "express": "^4.17.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.12",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^6.0.13",
     "multer": "^1.4.3"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "nodemon": "^2.0.14"
   },
   "engines": {
-    "node":"12.4.0",
-    "npm":"6.9.0"
+    "node": "12.4.0",
+    "npm": "6.9.0"
   }
 }

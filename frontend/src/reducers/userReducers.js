@@ -1,4 +1,4 @@
-import { USER_DELETE_FAIL, USER_DELETE_REQUEST, USER_DELETE_RESET, USER_DELETE_SUCCESS, USER_DETAILS_FAIL, USER_DETAILS_REQUEST, USER_DETAILS_RESET, USER_DETAILS_SUCCSESS, USER_LIST_FAIL, USER_LIST_REQUEST, USER_LIST_SUCCSESS, USER_REGISTER_FAIL, USER_REGISTER_REQUEST, USER_REGISTER_SUCCSESS, USER_SIGNIN_FAIL, USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCSESS, USER_SIGNOUT, USER_UPDATE_FAIL, USER_UPDATE_PROFILE_FAIL, USER_UPDATE_PROFILE_REQUEST, USER_UPDATE_PROFILE_RESET, USER_UPDATE_PROFILE_SUCCESS, USER_UPDATE_REQUEST, USER_UPDATE_RESET, USER_UPDATE_SUCCESS } from "../constants/userConstants";
+import { USER_ADDRESS_MAP_CONFIRM, USER_DELETE_FAIL, USER_DELETE_REQUEST, USER_DELETE_RESET, USER_DELETE_SUCCESS, USER_DETAILS_FAIL, USER_DETAILS_REQUEST, USER_DETAILS_RESET, USER_DETAILS_SUCCSESS, USER_LIST_FAIL, USER_LIST_REQUEST, USER_LIST_SUCCSESS, USER_REGISTER_FAIL, USER_REGISTER_REQUEST, USER_REGISTER_SUCCSESS, USER_SIGNIN_FAIL, USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCSESS, USER_SIGNOUT, USER_TOPSELLER_LIST_FAIL, USER_TOPSELLER_LIST_REQUEST, USER_TOPSELLER_LIST_SUCCSESS, USER_UPDATE_FAIL, USER_UPDATE_PROFILE_FAIL, USER_UPDATE_PROFILE_REQUEST, USER_UPDATE_PROFILE_RESET, USER_UPDATE_PROFILE_SUCCESS, USER_UPDATE_REQUEST, USER_UPDATE_RESET, USER_UPDATE_SUCCESS } from "../constants/userConstants";
 
 export const userRegisterReducer = (state = {}, action) =>{
     switch (action.type) {
@@ -96,6 +96,28 @@ export const userDeleteReducer = (state = {}, action) => {
             return {loading: false, error: action.payload};
         case USER_DELETE_RESET:
             return {};
+        default:
+            return state;
+    }
+};
+
+export const userTopSellerListReducer = (state = {loading: true}, action) => {
+    switch (action.type) {
+        case USER_TOPSELLER_LIST_REQUEST:
+            return {loading: true};
+        case USER_TOPSELLER_LIST_SUCCSESS:
+            return {loading:false, users: action.payload};
+        case USER_TOPSELLER_LIST_FAIL:
+            return {loading: false, error: action.payload};
+        default:
+            return state;
+    }
+};
+
+export const userAddressMapReducer = (state = {}, action) => {
+    switch (action.type) {
+        case USER_ADDRESS_MAP_CONFIRM:
+            return { address: action.payload };
         default:
             return state;
     }

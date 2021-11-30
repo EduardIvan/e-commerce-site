@@ -4,8 +4,10 @@ import { deleteUser, listUsers } from '../actions/userActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { USER_DETAILS_RESET } from '../constants/userConstants';
+import { useNavigate } from 'react-router-dom';
 
-export default function UserListScreen(props) {
+export default function UserListScreen() {
+    const navigate = useNavigate();
     const userList = useSelector(state => state.userList);
     const { loading, error, users } = userList;
 
@@ -55,7 +57,7 @@ export default function UserListScreen(props) {
                                         <td>{user.isSeller? 'YES' : 'NO'}</td>
                                         <td>{user.isAdmin? 'YES' : 'NO'}</td>
                                         <td>
-                                            <button type="button" className="small" onClick={() => props.history.push(`/user/${user._id}/edit`)}>Edit</button>
+                                            <button type="button" className="small" onClick={() => navigate(`/user/${user._id}/edit`)}>Edit</button>
                                             <button type="button" className="small" onClick={() => deleteHandler(user)}>Delete</button>
                                         </td>
                                     </tr>
