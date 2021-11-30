@@ -3,8 +3,8 @@ import { PRODUCT_CATEGORY_LIST_FAIL, PRODUCT_CATEGORY_LIST_REQUEST, PRODUCT_CATE
 
 
 export const listProducts = ({
-    seller='',
     pageNumber='',
+    seller='',
     name='', 
     category='', 
     order='', 
