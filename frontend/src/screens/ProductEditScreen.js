@@ -10,7 +10,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 export default function ProductEditScreen(props) {
     const navigate = useNavigate();
     const params = useParams();
-    const productId = params;
+    const {id: productId} = params;
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [image, setImage] = useState('');
