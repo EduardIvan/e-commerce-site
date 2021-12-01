@@ -7,7 +7,7 @@ import MessageBox from '../components/MessageBox';
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
 import { useNavigate, useParams } from 'react-router-dom';
 
-export default function ProductEditScreen(props) {
+export default function ProductEditScreen() {
     const navigate = useNavigate();
     const params = useParams();
     const {id: productId} = params;

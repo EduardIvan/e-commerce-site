@@ -69,7 +69,7 @@ export const payOrderEmailTemplate = (order) => {
     <p>
     Hi ${order.user.name},</p>
     <p>We have finished processing your order.</p>
-    <h2>[Order ${order._id}] (${order.createdAt})</h2>
+    <h2>[Order ${order._id}] (${order.createdAt.toFixed(2).substring(0, 10)})</h2>
     <table>
     <thead>
     <tr>

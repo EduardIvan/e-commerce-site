@@ -28,6 +28,7 @@ import { listProductCategories } from './actions/productActions';
 import MessageBox from './components/MessageBox';
 import LoadingBox from './components/LoadingBox';
 import MapScreen from './screens/MapScreen';
+import DashboardScreen from './screens/DashboardScreen';
 
 
 function App() {
@@ -95,6 +96,9 @@ function App() {
                  Seller <i className="fa fa-caret-down"></i>
                </Link>
                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
                  <li>
                    <Link to="/productlist/seller">Products</Link>
                  </li>
@@ -180,8 +184,10 @@ function App() {
             <Route path="/orderlist" element={<AdminRoute><OrderListScreen /></AdminRoute>} />
             <Route path="/userList" element={<AdminRoute><UserListScreen /></AdminRoute>} />
             <Route path="/user/:id/edit" element={<AdminRoute><UserEditScreen /></AdminRoute>} />
+            <Route path="/dashboard" element={<AdminRoute><DashboardScreen /></AdminRoute>} />
             <Route path="/productlist/seller" element={<SellerRoute><ProductListScreen /></SellerRoute>} />
             <Route path="/orderlist/seller" element={<SellerRoute><OrderListScreen /></SellerRoute>} />
+            <Route path="/dashboard/seller" element={<SellerRoute><DashboardScreen /></SellerRoute>} />
             <Route path="/" element={<HomeScreen />} exact></Route>
             
           </Routes>

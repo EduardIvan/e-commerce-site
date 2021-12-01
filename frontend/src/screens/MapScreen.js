@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const libs = ['places'];
-const defaultLocation = { lat: 45.516, lng: -73.56 };
+const defaultLocation = { lat: 44.439663, lng: 26.096306 };
 
 export default function MapScreen() {
   const navigate = useNavigate();

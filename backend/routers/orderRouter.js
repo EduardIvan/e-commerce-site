@@ -1,7 +1,9 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import Order from '../models/orderModel.js';
-import { isAdmin, isAuth, isSellerOrAdmin, mailgun, payOrderEmailTemplate } from '../utils.js';
+import User from '../models/userModel.js';
+import Product from '../models/productModel.js';
+import { isAdmin, isAuth, isSeller, isSellerOrAdmin, mailgun, payOrderEmailTemplate } from '../utils.js';
 
 const orderRouter = express.Router();
 orderRouter.get('/', isAuth, isSellerOrAdmin, expressAsyncHandler(async(req, res) => {
@@ -14,7 +16,7 @@ orderRouter.get('/', isAuth, isSellerOrAdmin, expressAsyncHandler(async(req, res
 orderRouter.get(
     '/summary',
     isAuth,
-    isAdmin,
+    isSellerOrAdmin,
     expressAsyncHandler(async (req, res) => {
       const orders = await Order.aggregate([
         {
