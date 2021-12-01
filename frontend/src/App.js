@@ -29,6 +29,8 @@ import MessageBox from './components/MessageBox';
 import LoadingBox from './components/LoadingBox';
 import MapScreen from './screens/MapScreen';
 import DashboardScreen from './screens/DashboardScreen';
+import SupportScreen from './screens/SupportScreen';
+import ChatBox from './components/ChatBox';
 
 
 function App() {
@@ -126,6 +128,9 @@ function App() {
                   <li>
                     <Link to="/userlist">Users</Link>
                   </li>
+                  <li>
+                    <Link to="/support">Support</Link>
+                  </li>
                 </ul>
               </div>
             )}
@@ -185,6 +190,7 @@ function App() {
             <Route path="/userList" element={<AdminRoute><UserListScreen /></AdminRoute>} />
             <Route path="/user/:id/edit" element={<AdminRoute><UserEditScreen /></AdminRoute>} />
             <Route path="/dashboard" element={<AdminRoute><DashboardScreen /></AdminRoute>} />
+            <Route path="/support" element={<AdminRoute><SupportScreen /></AdminRoute>} />
             <Route path="/productlist/seller" element={<SellerRoute><ProductListScreen /></SellerRoute>} />
             <Route path="/orderlist/seller" element={<SellerRoute><OrderListScreen /></SellerRoute>} />
             <Route path="/dashboard/seller" element={<SellerRoute><DashboardScreen /></SellerRoute>} />
@@ -194,7 +200,8 @@ function App() {
         </main>
 
         <footer className="row center">
-          All rights reserved
+          {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
+          <div>All rights reserved</div>
         </footer>
       </div>
     </BrowserRouter>
