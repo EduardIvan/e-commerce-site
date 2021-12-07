@@ -16,7 +16,8 @@ orderRouter.get('/', isAuth, isSellerOrAdmin, expressAsyncHandler(async(req, res
 orderRouter.get(
     '/summary',
     isAuth,
-    isSellerOrAdmin,
+    isSeller,
+    isAdmin,
     expressAsyncHandler(async (req, res) => {
       const orders = await Order.aggregate([
         {
