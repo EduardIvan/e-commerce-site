@@ -107,6 +107,14 @@ orderRouter.put('/:id/pay', isAuth, expressAsyncHandler(async (req, res) =>{
           email_address: req.body.email_address,
         };
         const updatedOrder = await order.save();
+        // Update count in stock
+        for (const index in updatedOrder.orderItems) {
+          const item = updatedOrder.orderItems[index];
+          const product = await Product.findById(item.product);
+          product.countInStock -= item.qty;
+          product.sold += item.qty;      
+          await product.save();
+        }
         try {
             mailgun().messages().send({
                 from: 'E-commerce <e-commerce@mg.yourdomain.com>',
