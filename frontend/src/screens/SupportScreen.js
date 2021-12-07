@@ -7,8 +7,8 @@ let allUsers = [];
 let allMessages = [];
 let allSelectedUser = {};
 const ENDPOINT =
-  window.location.host.indexOf('https://ie-ecommerce-site.herokuapp.com/') >= 0
-    ? 'https://ie-ecommerce-site.herokuapp.com/'
+  window.location.host.indexOf('localhost') >= 0
+    ? 'http://192.168.56.1:3000'
     : window.location.host;
 
 export default function SupportScreen() {
