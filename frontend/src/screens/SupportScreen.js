@@ -7,7 +7,7 @@ let allUsers = [];
 let allMessages = [];
 let allSelectedUser = {};
 const ENDPOINT =
-  window.location.host.indexOf('localhost') >= 0
+  window.location.host.indexOf('https://ie-ecommerce-site.herokuapp.com/') >= 0
     ? 'https://ie-ecommerce-site.herokuapp.com/'
     : window.location.host;
 
