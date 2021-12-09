@@ -26,8 +26,8 @@ body {
 }
 
 header {
+  padding: 1rem;
   grid-area: header;
-  height: 6rem;
   background-color: #203040;
 }
 main {
