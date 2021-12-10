@@ -220,6 +220,10 @@ img.medium {
 img.large {
   width: 100%;
 }
+.carouselLogo {
+  height: 30rem;
+  width: 5rem;
+}
 
 /* Card */
 .c-height {
