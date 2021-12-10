@@ -214,7 +214,7 @@ img.small{
 }
 img.medium {
   height: 20rem;
-  width: 27rem;
+  width: 100%;
   
 }
 img.large {
@@ -224,6 +224,7 @@ img.large {
 /* Card */
 .c-height {
   height: 35rem;
+  width: 27rem;
 }
 .card {
   border: 0.1rem #c0c0c0 solid;
