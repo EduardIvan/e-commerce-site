@@ -67,7 +67,7 @@ function App() {
             <SearchBox />
           </div>
           <div>
-            <Link to="/cart">Cart
+            <Link to="/cart"><i class="fas fa-shopping-cart"></i>Cart
             {cartItems.length > 0 && (
               <span className="badge">{cartItems.length}</span>
             )}
@@ -75,16 +75,16 @@ function App() {
             {
               userInfo ? (
                 <div className="dropdown">
-                  <Link to="#">{userInfo.name} <i className="fa fa-caret-down"></i> </Link>
+                  <Link to="#"><i class="fas fa-user"></i> {userInfo.name} <i className="fa fa-caret-down"></i> </Link>
                   <ul className="dropdown-content">
                     <li>
-                      <Link to="/profile">User Profile</Link>
+                      <Link to="/profile"><i class="far fa-id-badge"></i>User Profile</Link>
                     </li>
                     <li>
-                      <Link to="/orderhistory">Order History</Link>
+                      <Link to="/orderhistory"><i class="fas fa-history"></i>Order History</Link>
                     </li>
                     <li>
-                      <Link to="#signout" onClick={signoutHandler}>Sign Out</Link>
+                      <Link to="#signout" onClick={signoutHandler}><i class="fas fa-sign-out-alt"></i>Sign Out</Link>
                     </li>
                     
                   </ul>
@@ -96,17 +96,17 @@ function App() {
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">
                <Link to="#admin">
-                 Seller <i className="fa fa-caret-down"></i>
+                  <i class="fas fa-copyright"></i>Seller <i className="fa fa-caret-down"></i>
                </Link>
                <ul className="dropdown-content">
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/dashboard"><i class="fas fa-chart-pie"></i>Dashboard</Link>
                   </li>
                  <li>
-                   <Link to="/productlist/seller">Products</Link>
+                   <Link to="/productlist/seller"><i class="fas fa-tshirt"></i>Products</Link>
                  </li>
                  <li>
-                   <Link to="/orderlist/seller">Orders</Link>
+                   <Link to="/orderlist/seller"><i class="fas fa-boxes"></i>Orders</Link>
                  </li>
                </ul>
               </div>
@@ -114,23 +114,23 @@ function App() {
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <Link to="#admin">
-                  Admin <i className="fa fa-caret-down"></i>
+                  <i class="fas fa-user-shield"></i> Admin <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/dashboard"><i class="fas fa-chart-pie"></i>Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="/productlist">Products</Link>
+                    <Link to="/productlist"><i class="fas fa-tshirt"></i>Products</Link>
                   </li>
                   <li>
-                    <Link to="/orderlist">Orders</Link>
+                    <Link to="/orderlist"><i class="fas fa-boxes"></i>Orders</Link>
                   </li>
                   <li>
-                    <Link to="/userlist">Users</Link>
+                    <Link to="/userlist"><i class="fas fa-users"></i>Users</Link>
                   </li>
                   <li>
-                    <Link to="/support">Support</Link>
+                    <Link to="/support"><i class="fas fa-headset"></i>Support</Link>
                   </li>
                 </ul>
               </div>
